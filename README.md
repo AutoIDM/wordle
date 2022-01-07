@@ -60,3 +60,11 @@ word like ('%u%')
 **Results**
 1. unlit
 1. until
+
+
+# Run analytics yourself
+1. Setup postgres ( `podman run -e POSTGRES_PASSWORD=postgres -p 5432:5432 -h postgres -d postgres` )
+2. Run [Initial Setup](https://github.com/AutoIDM/wordle/blob/main/initial_setup.sql)
+3. Run [Most Used Letter](https://github.com/AutoIDM/wordle/blob/main/most_used_letter.sql)
+4. Have fun!
+
