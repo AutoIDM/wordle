@@ -18,6 +18,41 @@ Most used letters
 | n|	2952|
 | u|	2511|
 
+# Best first word by word matches
+sql: https://github.com/AutoIDM/wordle/blob/main/best_first_word_by_word_matches.sql
+
+
+
+**Results**
+| matcher_strategy   | word | words matched | total_word_count |
+| -------------------- | ----- | ----- | ----- |
+| oneletter\_matcher   | toeas | 12417 | 12972 |
+| oneletter\_matcher   | stoae | 12417 | 12972 |
+| oneletter\_matcher   | aloes | 12412 | 12972 |
+| oneletter\_matcher   | aeons | 12407 | 12972 |
+| oneletter\_matcher   | soare | 12395 | 12972 |
+| twoletter\_matcher   | rales | 5995  | 12972 |
+| twoletter\_matcher   | laers | 5995  | 12972 |
+| twoletter\_matcher   | lears | 5995  | 12972 |
+| twoletter\_matcher   | earls | 5995  | 12972 |
+| twoletter\_matcher   | laser | 5995  | 12972 |
+| threeletter\_matcher | stear | 1724  | 12972 |
+| threeletter\_matcher | resat | 1724  | 12972 |
+| threeletter\_matcher | aster | 1724  | 12972 |
+| threeletter\_matcher | rates | 1724  | 12972 |
+| threeletter\_matcher | reast | 1724  | 12972 |
+| fourletter\_matcher  | stear | 541   | 12972 |
+| fourletter\_matcher  | resat | 541   | 12972 |
+| fourletter\_matcher  | rates | 541   | 12972 |
+| fourletter\_matcher  | aster | 541   | 12972 |
+| fourletter\_matcher  | reast | 541   | 12972 |
+| fiveletter\_matcher  | stear | 111   | 12972 |
+| fiveletter\_matcher  | resat | 111   | 12972 |
+| fiveletter\_matcher  | aster | 111   | 12972 |
+| fiveletter\_matcher  | rates | 111   | 12972 |
+| fiveletter\_matcher  | reast | 111   | 12972 |
+
+
 # Best first word
 
 -- Best first word to use
