@@ -4,6 +4,7 @@ Wordle is a fun game, but I couldn't resist knowing what a great first / second 
 
 
 # Best first word
+This is better than our original best first word, because it only takes into account the actual answers that are available, and uses a better strategy 
 
 # SQL
 https://github.com/AutoIDM/wordle/blob/main/actual_best_first_word.sql 
