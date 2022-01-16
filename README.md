@@ -1,7 +1,7 @@
 # Wordle Analytics 
 Wordle is a fun game, but I just couldn't resist knowing what a great first / second word choice would be. 
 
-There's have multiple strategies available here in this repo, the best strategy we have so far is listed at the top. Feel free to add ideas as an issue! Orginally I went with something really naive as I didn't want to think too hard, but then I opened pandoras box, and here we are!
+There's multiple strategies available here in this repo, the best strategy we have so far is listed at the top. Feel free to add ideas as an issue! Orginally I went with something really naive as I didn't want to think too hard, but then I opened pandoras box, and here we are!
 
 One core tennat here is that we don't cheat while we're playing the game, we just want to know what an optimal strategy is going into the game.
 
