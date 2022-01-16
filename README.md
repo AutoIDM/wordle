@@ -1,14 +1,23 @@
 # Wordle Analytics 
-Wordle is a fun game, but I couldn't resist knowing what a great first / second word choice would be.
+Wordle is a fun game, but I just couldn't resist knowing what a great first / second word choice would be. 
 
+There's have multiple strategies available here in this repo, the best strategy we have so far is listed at the top. Feel free to add ideas as an issue! Orginally I went with something really naive as I didn't want to think too hard, but then I opened pandoras box, and here we are!
 
+One core tennat here is that we don't cheat while we're playing the game, we just want to know what an optimal strategy is going into the game.
+
+# Wordle design choices
+Wordle has every possible 5 letter word listed as an avilable option, and there's another list of possible answers due to the fact that a lot of the 5 letter words are very rarely used in english. Due to that our best strategy takes the possible answers into account while determining what the best first word to use is! Note that not every strategy on this list has this feature due to not knowing about all of this before hand! https://notfunatparties.substack.com/p/wordle-solver was a good resource that explained the answers vs question list. 
 
 # Best first word
-This is better than our original best first word, because it only takes into account the actual answers that are available, and uses a better strategy 
 
-# SQL
+Test every combination of Question (~12k words) to Answer (~2k words from Wordle's list). Pick the word with the most number of letter matches.
+
+Some improvements available like right now we double count letters if the answer word has the letter duplicated.
+
+## SQL
 https://github.com/AutoIDM/wordle/blob/main/actual_best_first_word.sql 
 
+## Results
 |guess|sum |avg               |stddev                |max|min|
 |-----|----|------------------|----------------------|---|---|
 |roate|4594|1.9844492440604752|1.0355479830658308    |5  |0  |
@@ -44,12 +53,14 @@ Most used letters
 | n|	2952|
 | u|	2511|
 
-# Best first word by word matches
-sql: https://github.com/AutoIDM/wordle/blob/main/best_first_word_by_word_matches.sql
+# First word by letter matching
+Just looking at the number of letters that match the answer word, what's the best word for generating one letter match? What's the best for generating 2 letter matches?
 
+## SQL 
+https://github.com/AutoIDM/wordle/blob/main/best_first_word_by_word_matches.sql
 
+## Results
 
-**Results**
 | matcher_strategy   | word | words matched | total_word_count |
 | -------------------- | ----- | ----- | ----- |
 | oneletter\_matcher   | toeas | 12417 | 12972 |
@@ -79,10 +90,16 @@ sql: https://github.com/AutoIDM/wordle/blob/main/best_first_word_by_word_matches
 | fiveletter\_matcher  | reast | 111   | 12972 |
 
 
-# Best first word
+# Naive approach looking at frequency of letters used
+Looking at all of the 5 letter words available what's the most commonly used letter?
 
--- Best first word to use
+## Most common letter
+SQL: https://github.com/AutoIDM/wordle/blob/main/most_used_letter.sql
 
+## First Word
+Take the top 5 letters from the most common letter and find a word
+
+## SQL
 ```sql
 select * from public.wordle
 where 
@@ -96,16 +113,17 @@ word like ('%o%')
 and
 word like ('%r%')
 ```
-
-**Results**
+## Results
 1. arose
 1. aeros
 1. soare
 
 # Best second word
+If no matches on the first word, best second word based on the next 5 most commonly used letters
 
+## SQL
 ```sql
---If no matches on the first word, best second word
+--
 select * from public.wordle
 where 
 word like ('%i%')
