@@ -36,22 +36,6 @@ https://github.com/AutoIDM/wordle/blob/main/actual_best_first_word.sql
 |retia|4511|1.9485961123110151|1.0308304749950321    |5  |0  |
 
 
-# Results
-
-Most used letters
-
-| Letter | Count |
-| --- | --- |
-| s      |	6665 |
-| e|	6662|
-| a|	5990|
-| o|	4438|
-| r|	4158|
-| i|	3759|
-| l|	3371|
-| t|	3295|
-| n|	2952|
-| u|	2511|
 
 # First word by letter matching
 Just looking at the number of letters that match the answer word, what's the best word for generating one letter match? What's the best for generating 2 letter matches?
@@ -95,6 +79,23 @@ Looking at all of the 5 letter words available what's the most commonly used let
 
 ## Most common letter
 SQL: https://github.com/AutoIDM/wordle/blob/main/most_used_letter.sql
+
+## Results
+
+Most used letters
+
+| Letter | Count |
+| --- | --- |
+| s      |	6665 |
+| e|	6662|
+| a|	5990|
+| o|	4438|
+| r|	4158|
+| i|	3759|
+| l|	3371|
+| t|	3295|
+| n|	2952|
+| u|	2511|
 
 ## First Word
 Take the top 5 letters from the most common letter and find a word
