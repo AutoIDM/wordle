@@ -6,7 +6,7 @@ There's multiple strategies available here in this repo, the best strategy we ha
 One core tennat here is that we don't cheat while we're playing the game, we just want to know what an optimal strategy is going into the game.
 
 # Wordle design choices
-Wordle has every possible 5 letter word listed as an avilable option, and there's another list of possible answers due to the fact that a lot of the 5 letter words are very rarely used in english. Due to that our best strategy takes the possible answers into account while determining what the best first word to use is! Note that not every strategy on this list has this feature due to not knowing about all of this before hand! https://notfunatparties.substack.com/p/wordle-solver was a good resource that explained the answers vs question list. 
+Wordle has every possible 5 letter word available as a guess, and there's a seperate list of possible answers due to the fact that a lot of the 5 letter words are very rarely used in english. Due to these two lists our best strategy takes the possible answers into account while determining what the best first word to use is! Note that not every strategy on this list has this feature due to not knowing about all of this before hand! https://notfunatparties.substack.com/p/wordle-solver was a good resource that explained the answers vs question list. 
 
 # Best first word
 
