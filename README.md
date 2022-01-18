@@ -8,7 +8,7 @@ One core tennat here is that we don't cheat while we're playing the game, we jus
 # Wordle design choices
 Wordle has every possible 5 letter word available as a guess, and there's a seperate list of possible answers due to the fact that a lot of the 5 letter words are very rarely used in english. Due to these two lists our best strategy takes the possible answers into account while determining what the best first word to use is! Note that not every strategy on this list has this feature due to not knowing about all of this before hand! https://notfunatparties.substack.com/p/wordle-solver was a good resource that explained the answers vs question list. 
 
-# Best first word
+# Best first word (if best is defined as most number of letters matched in the first guess on average)
 
 Test every combination of Question (~12k words) to Answer (~2k words from Wordle's list). Pick the word with the most number of letter matches.
 
